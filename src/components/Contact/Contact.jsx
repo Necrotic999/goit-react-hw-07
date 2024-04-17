@@ -2,12 +2,12 @@ import css from "./Contact.module.css";
 import { BiSolidUser } from "react-icons/bi";
 import { FaPhone } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
   function handleDeleteContact(id) {
-    return dispatch(deleteContact(id));
+    dispatch(deleteContact(id));
   }
   return (
     <li className={css.user}>
